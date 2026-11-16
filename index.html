@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>COEP Tech Hostel — Admission &amp; Allotment System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap"
+    rel="stylesheet">
+  <!-- Supabase JS Client v2 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="shell">
+    <aside id="sidebar">
+      <div class="brand">
+        <div class="mark">COEP Tech<br>Hostel System</div>
+        <div class="sub">Admission, Merit List &amp;<br>Room Allotment</div>
+      </div>
+      <nav class="navlist" id="navlist"></nav>
+      <div id="sidebarDbCard"
+        style="margin:12px 14px 4px;padding:9px 12px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:4px;font-size:11.5px;display:flex;align-items:center;justify-content:flex-start;">
+        <span id="sbText" style="font-weight:600;color:#f2ece2;display:flex;align-items:center;gap:6px">
+          <span id="sbDot"
+            style="width:8px;height:8px;border-radius:50%;background:#a13c3c;display:inline-block"></span>
+          Supabase DB: Connecting…
+        </span>
+      </div>
+      <div class="navfoot">COEP Tech Hostel System · PostgreSQL Database</div>
+    </aside>
+    <main id="main">
+      <div class="topbar">
+        <div>
+          <h1 id="viewTitle">Dashboard <span class="yr-pill" id="yrPill"></span></h1>
+          <div class="desc" id="viewDesc"></div>
+        </div>
+        <div id="topbarActions" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <div id="topbarDbBadge"
+            style="display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:5px 12px;border-radius:20px;border:1px solid var(--line);background:var(--paper);color:var(--ink);">
+            <span id="topbarSbDot"
+              style="width:8px;height:8px;border-radius:50%;background:#a13c3c;display:inline-block"></span>
+            <span id="topbarSbLabel">Supabase DB: Not Connected</span>
+          </div>
+        </div>
+      </div>
+      <div id="view-dashboard" class="view"></div>
+      <div id="view-infra" class="view"></div>
+      <div id="view-admissions" class="view"></div>
+      <div id="view-rooms" class="view"></div>
+      <div id="view-students" class="view"></div>
+      <div id="view-fees" class="view"></div>
+      <div id="view-mess" class="view"></div>
+      <div id="view-visitors" class="view"></div>
+      <div id="view-complaints" class="view"></div>
+      <div id="view-reports" class="view"></div>
+    </main>
+  </div>
+  <div class="overlay" id="overlay">
+    <div class="modal" id="modalBody"></div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <!-- Application Logic -->
+  <script src="script.js"></script>
+</body>
+
+</html>
